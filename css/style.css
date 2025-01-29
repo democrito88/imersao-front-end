@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root{
     --fundo-nav: #232323;
     --fundo-sidenav: #121212;
@@ -16,8 +18,6 @@ body{
 }
 
 header{
-    position: fixed;
-    z-index: 1;
     background-color: var(--fundo-principal);
     width: 100%;
 }
@@ -47,12 +47,13 @@ header{
 }
 
 .sidebar{
-    position: fixed;
-    top: 5em;
+    position: relative;
+    top: 15em;
     left: 0;
     bottom: 0;
     padding: 12px;
-    width: 300px;
+    margin: 0 auto;
+    width: 90%;
     background-color: var(--fundo-sidenav);
     border-radius: 11px;
 }
@@ -69,18 +70,13 @@ header{
 }
 
 .nav-principal{
-    padding-top: 1em;
+    display: none; /* Ocultar menu */
+    padding: 1em 0 0 2em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
     color: var(--cor-texto-navbar);
     width: 100%;
-
-    ul{
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-    }
 }
 
 .nav-principal__buscar{
@@ -116,12 +112,31 @@ header{
         color: var(--cor-texto);
         font-weight: 500;
     }
+
+    input:focus{
+        outline: none;
+    }
 }
 
 .nav-principal__entrar{
-    gap: 2em;
-    align-items: center;
-    margin-right: 2em;
+    gap: 1em;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-principal__entrar.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cor-texto);
+    width: 2em;
+    height: 2.5em;
 }
 
 .botao-branco{
@@ -131,16 +146,20 @@ header{
     color: var(--fundo-principal);
     border: none;
     font-weight: 800;
+    width: 50%;
 }
 
 .main{
-    position: absolute;
-    left: 340px;
-    top: 100px;
-    width: calc(100% - 390px);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.musicas{
+    width: 80%;
+    margin: 0 auto;
     background-image: linear-gradient(var(--fundo-nav), var(--fundo-principal));
     border-radius: 10px;
-    padding: 1.5em 1.5em 5em 1.5em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
 }
 
 .banner-rodape{
@@ -151,7 +170,8 @@ header{
     color: var(--cor-texto);
     padding: 1em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 1em;
     justify-content: space-between;
 
     div{
@@ -166,24 +186,24 @@ header{
     }
 
     button{
-        margin-right: 2em;
+        margin: 0 auto;
         font-weight: 800;
     }
 }
 
-.main__section__titulo{
+.musicas__section__titulo{
     font-size: 1.5em;
     font-weight: 600;
 }
 
 .lista-artistas{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 2em 0;
 }
 
-.main img{
+.musicas img{
     width: 200px;
     border-radius: 10px;
 }
@@ -207,14 +227,16 @@ header{
 .rodape{
     margin: 5em 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 2em;
     justify-content: space-between;
 }
 
 .links{
     display: flex;
-    flex-direction: row;
-    gap: 4em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
 }
 
 .links h6{
@@ -231,7 +253,7 @@ header{
     gap: 2.5em;
 
     li span{
-        padding: 0.4em 0.5em 0.1em 0.5em;
+        padding: 0.5em 0.5em 0.1em 0.5em;
         border-radius: 40px;
         background-color: var(--cor-texto);
         color: var(--cor-texto-navbar);
@@ -280,4 +302,74 @@ header{
     padding: 0.5em;
     display: flex;
     flex-direction: row;
+}
+
+/*
+mobile: 576px;
+tablet: 768px;
+desktop: 992px;
+*/
+@media only screen and (min-width: 768px) { 
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main{
+        flex-direction: row;
+    }
+
+    .sidebar{
+        top: 0;
+        width: 30%;
+    }
+
+    .musicas{
+        width: 55%;
+        padding-bottom: 10em;
+    }
+
+    .lista-artistas{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .artista img{
+        width: 150px;
+    }
+
+    .links{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 992px) { 
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav-principal__entrar{
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+
+        button{
+            width: max-content;
+        }
+    }
+
+    .banner-rodape{
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 0;
+        button{
+            margin: 0;
+            width: max-content;
+        }
+    }
+
+    .rodape{
+        flex-direction: row;
+    }
 }
