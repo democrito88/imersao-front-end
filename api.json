@@ -1,0 +1,77 @@
+[
+    {
+        "nome": "Christmas Hits",
+        "artista": "playlist",
+        "capa": "../assets/playlist/1.jpeg"
+    },
+    {
+        "nome": "Pop Mix",
+        "artista": "playlist",
+        "capa": "../assets/playlist/2.png"
+    },
+    {
+        "nome": "New music friday",
+        "artista": "playlist",
+        "capa": "../assets/playlist/3.jpeg"
+    },
+    {
+        "nome": "Pod Delas",
+        "artista": "podcast",
+        "capa": "../assets/playlist/4.jpeg"
+    },
+    {
+        "nome": "Beast mode",
+        "artista": "playlist",
+        "capa": "../assets/playlist/5.jpeg"
+    },
+    {
+        "nome": "Science vs",
+        "artista": "podcast",
+        "capa": "../assets/playlist/6.jpeg"
+    },
+    {
+        "nome": "Esquenta Sertanejo",
+        "artista": "playlist",
+        "capa": "../assets/playlist/7.jpeg"
+    },
+    {
+        "nome": "Pagodeira",
+        "artista": "playlist",
+        "capa": "../assets/playlist/8.jpeg"
+    },
+    {
+        "nome": "Funk Hits",
+        "artista": "playlist",
+        "capa": "../assets/playlist/9.jpeg"
+    },
+    {
+        "nome": "Aquarela Brasileira",
+        "artista": "playlist",
+        "capa": "../assets/playlist/10.jpeg"
+    },
+    {
+        "nome": "Rock this",
+        "artista": "playlist",
+        "capa": "../assets/playlist/11.jpeg"
+    },
+    {
+        "nome": "Rap Caviar",
+        "artista": "playlist",
+        "capa": "../assets/playlist/12.jpeg"
+    },
+    {
+        "nome": "All New Indie",
+        "artista": "playlist",
+        "capa": "../assets/playlist/13.jpeg"
+    },
+    {
+        "nome": "Chill Vibes",
+        "artista": "playlist",
+        "capa": "../assets/playlist/14.jpeg"
+    },
+    {
+        "nome": "Viva Latino",
+        "artista": "playlist",
+        "capa": "../assets/playlist/15.jpeg"
+    }
+]
